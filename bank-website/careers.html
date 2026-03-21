@@ -161,25 +161,25 @@
       <div class="careers-register fade-in" id="apply">
         <h2>Register as an Applicant</h2>
         <p>Don't see a perfect match? Register with us and we'll notify you when a suitable position opens up.</p>
-        <form data-form="career">
+        <form name="career" data-form="career" method="POST" data-netlify="true">
           <div class="form-row">
             <div class="form-group">
               <label for="cr-fname">First Name *</label>
-              <input type="text" id="cr-fname" placeholder="First name" required>
+              <input type="text" id="cr-fname" name="fname" placeholder="First name" required>
             </div>
             <div class="form-group">
               <label for="cr-lname">Last Name *</label>
-              <input type="text" id="cr-lname" placeholder="Last name" required>
+              <input type="text" id="cr-lname" name="lname" placeholder="Last name" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label for="cr-age">Age *</label>
-              <input type="number" id="cr-age" placeholder="e.g. 28" min="18" max="65" required>
+              <input type="number" id="cr-age" name="age" placeholder="e.g. 28" min="18" max="65" required>
             </div>
             <div class="form-group">
               <label for="cr-gender">Gender</label>
-              <select id="cr-gender">
+              <select id="cr-gender" name="gender">
                 <option value="">Select</option>
                 <option>Male</option>
                 <option>Female</option>
@@ -191,16 +191,16 @@
           <div class="form-row">
             <div class="form-group">
               <label for="cr-phone">Phone Number *</label>
-              <input type="tel" id="cr-phone" placeholder="98XXXXXXXX" required>
+              <input type="tel" id="cr-phone" name="phone" placeholder="98XXXXXXXX" required>
             </div>
             <div class="form-group">
               <label for="cr-email">Email Address *</label>
-              <input type="email" id="cr-email" placeholder="you@email.com" required>
+              <input type="email" id="cr-email" name="email" placeholder="you@email.com" required>
             </div>
           </div>
           <div class="form-group">
             <label for="cr-qualification">Highest Qualification *</label>
-            <select id="cr-qualification" required>
+            <select id="cr-qualification" name="qualification" required>
               <option value="">Select qualification</option>
               <option>10th / 12th Pass</option>
               <option>Diploma</option>
@@ -213,7 +213,7 @@
           <div class="form-row">
             <div class="form-group">
               <label for="cr-experience">Years of Experience *</label>
-              <select id="cr-experience" required>
+              <select id="cr-experience" name="experience" required>
                 <option value="">Select</option>
                 <option>Fresher (0–1 year)</option>
                 <option>1–3 Years</option>
@@ -224,7 +224,7 @@
             </div>
             <div class="form-group">
               <label for="cr-department">Preferred Department</label>
-              <select id="cr-department">
+              <select id="cr-department" name="department">
                 <option value="">Select department</option>
                 <option>Retail Banking</option>
                 <option>Corporate Banking</option>
@@ -240,7 +240,7 @@
           <div class="form-row">
             <div class="form-group">
               <label for="cr-location">Preferred Location</label>
-              <select id="cr-location">
+              <select id="cr-location" name="location">
                 <option value="">Select city</option>
                 <option>Mumbai</option>
                 <option>New Delhi</option>
@@ -254,16 +254,16 @@
             </div>
             <div class="form-group">
               <label for="cr-ctc">Current CTC (₹ LPA)</label>
-              <input type="text" id="cr-ctc" placeholder="e.g. 8.5">
+              <input type="text" id="cr-ctc" name="ctc" placeholder="e.g. 8.5">
             </div>
           </div>
           <div class="form-group">
             <label for="cr-skills">Key Skills</label>
-            <input type="text" id="cr-skills" placeholder="e.g. Python, SQL, Risk Analysis, Sales">
+            <input type="text" id="cr-skills" name="skills" placeholder="e.g. Python, SQL, Risk Analysis, Sales">
           </div>
           <div class="form-group">
             <label for="cr-about">Tell Us About Yourself</label>
-            <textarea id="cr-about" placeholder="Brief summary of your profile, achievements, and career goals..." rows="4"></textarea>
+            <textarea id="cr-about" name="about" placeholder="Brief summary of your profile, achievements, and career goals..." rows="4"></textarea>
           </div>
           <button type="submit" class="form-submit-btn">Submit Application →</button>
         </form>

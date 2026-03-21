@@ -92,22 +92,22 @@
         <div class="form-card fade-in" style="position:sticky; top:100px;">
           <h3>Apply for a Credit Card</h3>
           <p style="font-size:.88rem; color:var(--text-secondary); margin-bottom:1.2rem;">Share your details and our Credit Card team will reach out with the best offers.</p>
-          <form data-form="credit-card">
+          <form name="credit-card" data-form="credit-card" method="POST" data-netlify="true">
             <div class="form-group">
               <label for="cc-name">Full Name *</label>
-              <input type="text" id="cc-name" placeholder="Enter your full name" required>
+              <input type="text" id="cc-name" name="name" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
               <label for="cc-phone">Phone Number *</label>
-              <input type="tel" id="cc-phone" placeholder="98XXXXXXXX" required>
+              <input type="tel" id="cc-phone" name="phone" placeholder="98XXXXXXXX" required>
             </div>
             <div class="form-group">
               <label for="cc-email">Email Address *</label>
-              <input type="email" id="cc-email" placeholder="you@email.com" required>
+              <input type="email" id="cc-email" name="email" placeholder="you@email.com" required>
             </div>
             <div class="form-group">
               <label for="cc-card">Preferred Card</label>
-              <select id="cc-card">
+              <select id="cc-card" name="card_type">
                 <option value="">Select card type</option>
                 <option>BNB Classic</option>
                 <option>BNB Gold</option>

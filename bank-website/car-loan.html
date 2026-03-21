@@ -84,22 +84,22 @@
         <div class="form-card fade-in" style="position:sticky; top:100px;">
           <h3>Interested? Get a Callback</h3>
           <p style="font-size:.88rem; color:var(--text-secondary); margin-bottom:1.2rem;">Share your details and our Car Loan advisor will connect with you.</p>
-          <form data-form="car-loan">
+          <form name="car-loan" data-form="car-loan" method="POST" data-netlify="true">
             <div class="form-group">
               <label for="cl-name">Full Name *</label>
-              <input type="text" id="cl-name" placeholder="Enter your full name" required>
+              <input type="text" id="cl-name" name="name" placeholder="Enter your full name" required>
             </div>
             <div class="form-group">
               <label for="cl-phone">Phone Number *</label>
-              <input type="tel" id="cl-phone" placeholder="98XXXXXXXX" required>
+              <input type="tel" id="cl-phone" name="phone" placeholder="98XXXXXXXX" required>
             </div>
             <div class="form-group">
               <label for="cl-email">Email Address *</label>
-              <input type="email" id="cl-email" placeholder="you@email.com" required>
+              <input type="email" id="cl-email" name="email" placeholder="you@email.com" required>
             </div>
             <div class="form-group">
               <label for="cl-type">Vehicle Type</label>
-              <select id="cl-type">
+              <select id="cl-type" name="type">
                 <option value="">Select type</option>
                 <option>New Car</option>
                 <option>Pre-Owned Car</option>

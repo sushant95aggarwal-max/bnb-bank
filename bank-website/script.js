@@ -65,8 +65,20 @@ function initForms() {
       });
 
       if (valid) {
-        showModal(form.dataset.form);
-        form.reset();
+        const formData = new FormData(form);
+        formData.append('form-name', form.getAttribute('name'));
+        
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        }).then(() => {
+          showModal(form.dataset.form);
+          form.reset();
+        }).catch((error) => {
+          console.error(error);
+          alert("There was an error submitting your form. Please try again.");
+        });
       }
     });
   });
